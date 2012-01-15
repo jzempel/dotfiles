@@ -1,0 +1,15 @@
+[submodule "vim/janus/clevercss"]
+	path = vim/janus/clevercss
+	url = https://github.com/vim-scripts/clevercss.vim.git
+
+[submodule "vim/janus/htmljinja"]
+	path = vim/janus/htmljinja
+	url = https://github.com/ocim/htmljinja.vim.git
+
+[submodule "vim/janus/jinja"]
+	path = vim/janus/jinja
+	url = https://github.com/vim-scripts/Jinja.git
+
+[submodule "vim/janus/nerdtree-tabs"]
+	path = vim/janus/nerdtree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs
