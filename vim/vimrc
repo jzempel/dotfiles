@@ -1,0 +1,34 @@
+color molokai
+
+if has("gui_running")
+    set transparency=5
+
+    " Remove the toolbar.
+    set guioptions-=T
+
+    " Remove the left-hand scrollbar.
+    set guioptions-=l
+    set guioptions-=L
+
+    " Remove the right-hand scrollbar.
+    set guioptions-=r
+endif
+
+" Tab settings.
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+" Determine listing exclusions.
+set wildignore+=*.egg,*.egg-info,*.pyc
+
+" NERDTree setting.
+let NERDTreeIgnore = [".DS_Store"]
+let NERDTreeShowHidden = 1
+
+" Remove trailing whitespace.
+autocmd BufWritePre * :%s/\s\+$//e
+
+" File types.
+autocmd BufNewFile,BufRead *.ccss setlocal ft=clevercss
+autocmd BufNewFile,BufRead *.html setlocal ft=htmljinja

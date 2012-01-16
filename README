@@ -1,0 +1,5 @@
+My public dot files.
+
+The extravagant bash prompt relies on vcprompt (http://vcprompt.com).
+
+The Vim configuration assumes an installation of Janus (https://github.com/carlhuda/janus).

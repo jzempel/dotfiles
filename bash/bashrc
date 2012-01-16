@@ -1,0 +1,54 @@
+# Exports.
+
+export CLICOLOR=1
+export NODE_PATH="/usr/local/lib/node_modules"
+
+# Prompt.
+
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+BLUE=$(tput setaf 4)
+MAGENTA=$(tput setaf 5)
+CYAN=$(tput setaf 6)
+WHITE=$(tput setaf 7)
+RESET=$(tput sgr0)
+
+prompt_code() {
+    status=$?
+
+    if [ $status != 0 ]; then
+        echo -n " ${WHITE}status ${RED}$status"
+    fi
+}
+
+prompt_virtualenv() {
+    if [ "$VIRTUAL_ENV" != '' ]; then
+        echo -n " ${WHITE}workon ${CYAN}`basename $VIRTUAL_ENV`"
+    fi
+}
+
+VIRTUAL_ENV_DISABLE_PROMPT=1
+
+export VCPROMPT_FORMAT=" ${WHITE}on ${BLUE}%n${RESET}:%b${GREEN}%m%u"
+export PROMPT='\n${MAGENTA}\u${WHITE}@${YELLOW}\h ${WHITE}in ${GREEN}\w\
+`prompt_code`\
+$(vcprompt)\
+`prompt_virtualenv`\
+${RESET}'
+export PS1="${PROMPT}
+$ "
+
+# Aliases.
+
+alias ..="cd .."
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
+
+# Tools.
+
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    source virtualenvwrapper.sh
+fi
