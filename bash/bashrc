@@ -58,6 +58,10 @@ alias ..5="cd ../../../../.."
 
 # Tools.
 
+if [ -f /usr/local/etc/bash_completion ]; then
+    source /usr/local/etc/bash_completion
+fi
+
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source virtualenvwrapper.sh
 fi
