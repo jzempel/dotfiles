@@ -14,25 +14,21 @@ CYAN=$(tput setaf 6)
 WHITE=$(tput setaf 7)
 RESET=$(tput sgr0)
 
-prompt_code() {
-    status=$?
-
-    if [ $status != 0 ]; then
-        echo -n " ${WHITE}status ${RED}$status"
-    fi
+prompt_status()
+{
+    [ $1 != 0 ] && echo -n " ${WHITE}status ${RED}$1"
 }
 
-prompt_virtualenv() {
-    if [ "$VIRTUAL_ENV" != '' ]; then
-        echo -n " ${WHITE}workon ${CYAN}`basename $VIRTUAL_ENV`"
-    fi
+prompt_virtualenv()
+{
+    [ "$VIRTUAL_ENV" != '' ] && echo -n " ${WHITE}workon ${CYAN}`basename $VIRTUAL_ENV`"
 }
 
 VIRTUAL_ENV_DISABLE_PROMPT=1
 
 export VCPROMPT_FORMAT=" ${WHITE}on ${BLUE}%n${RESET}:%b${GREEN}%m%u"
 export PROMPT='\n${MAGENTA}\u${WHITE}@${YELLOW}\h ${WHITE}in ${GREEN}\w\
-`prompt_code`\
+`prompt_status $?`\
 $(vcprompt)\
 `prompt_virtualenv`\
 ${RESET}'
