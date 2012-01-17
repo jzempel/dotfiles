@@ -14,9 +14,21 @@ CYAN=$(tput setaf 6)
 WHITE=$(tput setaf 7)
 RESET=$(tput sgr0)
 
-prompt_status()
+prompt_directory()
 {
-    [ $1 != 0 ] && echo -n " ${WHITE}status ${RED}$1"
+    directory=${1/#$HOME/\~}
+    echo -n " ${WHITE}in ${GREEN}"
+
+    if [ ${#directory} -gt 30 ]; then
+        echo -n "${directory:0:12}...${directory:${#directory}-15}"
+    else
+        echo -n "$directory"
+    fi
+}
+
+prompt_error()
+{
+    [ $1 != 0 ] && echo -n " ${WHITE}error ${RED}$1"
 }
 
 prompt_virtualenv()
@@ -27,8 +39,9 @@ prompt_virtualenv()
 VIRTUAL_ENV_DISABLE_PROMPT=1
 
 export VCPROMPT_FORMAT=" ${WHITE}on ${BLUE}%n${RESET}:%b${GREEN}%m%u"
-export PROMPT='\n${MAGENTA}\u${WHITE}@${YELLOW}\h ${WHITE}in ${GREEN}\w\
-`prompt_status $?`\
+export PROMPT='\n${MAGENTA}\u${WHITE}@${YELLOW}\h\
+`prompt_error $?`\
+`prompt_directory \w`\
 $(vcprompt)\
 `prompt_virtualenv`\
 ${RESET}'
