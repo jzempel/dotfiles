@@ -31,4 +31,4 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " File types.
 autocmd BufNewFile,BufRead *.ccss setlocal ft=clevercss
-autocmd BufNewFile,BufRead *.html setlocal ft=htmljinja
+autocmd BufNewFile,BufRead *.html setlocal ft=htmljinja textwidth=0
