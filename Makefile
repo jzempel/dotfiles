@@ -5,6 +5,10 @@ install-bash:
 	ln -s `pwd`/bash/bashrc ~/.bashrc
 	ln -s `pwd`/bash/inputrc ~/.inputrc
 
+install-git:
+	rm -f ~/.gitconfig
+	ln -s `pwd`/git/gitconfig ~/.gitconfig
+
 install-vim:
 	rm -rf ~/.janus ~/.vimrc.after
 	ln -s `pwd`/vim/janus ~/.janus

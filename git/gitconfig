@@ -1,0 +1,7 @@
+[user]
+    email = jzempel@gmail.com
+    name = Jonathan Zempel
+[core]
+    editor = mvim -f
+[color]
+    ui = auto
