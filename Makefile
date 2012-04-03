@@ -1,4 +1,4 @@
-install: install-bash install-vim
+install: install-bash install-git install-vim
 
 install-bash:
 	rm -f ~/.bashrc ~/.inputrc
