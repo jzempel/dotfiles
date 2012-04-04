@@ -7,6 +7,7 @@ install-bash:
 
 install-git:
 	rm -f ~/.gitconfig
+	ln -s `pwd`/git/gitignore ~/.gitignore
 	ln -s `pwd`/git/gitconfig ~/.gitconfig
 
 install-vim:

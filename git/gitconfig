@@ -3,6 +3,7 @@
     name = Jonathan Zempel
 [core]
     editor = mvim -f
+    excludesfile = ~/.gitignore
 [alias]
     switch = !legit switch \"$@\"
     branches = !legit branches
