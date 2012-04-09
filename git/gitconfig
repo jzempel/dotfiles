@@ -15,3 +15,5 @@
     graft = !legit graft \"$@\"
 [color]
     ui = auto
+[github]
+    user = jzempel
