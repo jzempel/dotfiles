@@ -15,5 +15,7 @@
     graft = !legit graft \"$@\"
 [color]
     ui = auto
+[format]
+    pretty = oneline
 [github]
     user = jzempel
