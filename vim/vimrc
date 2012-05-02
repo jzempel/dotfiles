@@ -32,3 +32,4 @@ autocmd BufWritePre * :%s/\s\+$//e
 " File types.
 autocmd BufNewFile,BufRead *.ccss setlocal ft=clevercss
 autocmd BufNewFile,BufRead *.html setlocal ft=htmljinja textwidth=0
+autocmd Filetype ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
