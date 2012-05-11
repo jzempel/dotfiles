@@ -2,6 +2,10 @@
 	path = vim/janus/clevercss
 	url = https://github.com/vim-scripts/clevercss.vim.git
 
+[submodule "vim/janus/flake8"]
+	path = vim/janus/flake8
+	url = https://github.com/nvie/vim-flake8.git
+
 [submodule "vim/janus/htmljinja"]
 	path = vim/janus/htmljinja
 	url = https://github.com/ocim/htmljinja.vim.git

@@ -29,6 +29,9 @@ let NERDTreeShowHidden = 1
 " Remove trailing whitespace.
 autocmd BufWritePre * :%s/\s\+$//e
 
+" Static syntax checker.
+autocmd BufWritePost *.py call Flake8()
+
 " File types.
 autocmd BufNewFile,BufRead *.ccss setlocal ft=clevercss
 autocmd BufNewFile,BufRead *.html setlocal ft=htmljinja textwidth=0
