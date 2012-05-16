@@ -4,7 +4,7 @@
 
 [submodule "vim/janus/flake8"]
 	path = vim/janus/flake8
-	url = https://github.com/nvie/vim-flake8.git
+	url = https://github.com/vim-scripts/vim-flake8.git
 
 [submodule "vim/janus/htmljinja"]
 	path = vim/janus/htmljinja
