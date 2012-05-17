@@ -19,3 +19,5 @@
     pretty = oneline
 [github]
     user = jzempel
+[push]
+    default = current
