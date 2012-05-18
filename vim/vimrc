@@ -20,7 +20,7 @@ set shiftwidth=4
 set softtabstop=4
 
 " Determine listing exclusions.
-set wildignore+=.DS_Store,*.egg,*.egg-info,*.pyc
+set wildignore+=.DS_Store,*.egg,*.egg-info,*.py[co]
 
 " NERDTree setting.
 let NERDTreeIgnore = [".DS_Store"]
