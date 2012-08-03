@@ -4,6 +4,7 @@ install-bash:
 	rm -f ~/.bashrc ~/.inputrc
 	ln -s `pwd`/bash/bashrc ~/.bashrc
 	ln -s `pwd`/bash/inputrc ~/.inputrc
+	test -d ~/.bash_profile || ln -s `pwd`/bash/bash_profile ~/.bash_profile
 
 install-git:
 	rm -f ~/.gitconfig ~/.gitignore
