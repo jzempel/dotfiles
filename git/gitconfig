@@ -4,6 +4,8 @@
 [core]
     editor = mvim -f
     excludesfile = ~/.gitignore
+[credential]
+    helper = osxkeychain
 [alias]
     switch = !legit switch \"$@\"
     branches = !legit branches
