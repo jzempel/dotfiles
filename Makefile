@@ -11,6 +11,8 @@ install-git:
 	ln -s `pwd`/git/gitignore ~/.gitignore
 
 install-vim:
+	git submodule init
+	git submodule update
 	test -d ~/.vim || git clone https://github.com/carlhuda/janus.git ~/.vim
 	rm -rf ~/.janus ~/.vimrc.after
 	ln -s `pwd`/vim/janus ~/.janus
