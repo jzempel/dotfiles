@@ -23,7 +23,7 @@ set softtabstop=4
 set wildignore+=.DS_Store,*.egg,*.egg-info,*.py[co]
 
 " NERDTree setting.
-let NERDTreeIgnore = [".DS_Store"]
+let NERDTreeIgnore = ["\.DS_Store","\.egg","\.egg-info","\.py[co]"]
 let NERDTreeShowHidden = 1
 
 " Remove trailing whitespace.
