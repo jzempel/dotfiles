@@ -12,6 +12,9 @@ if has("gui_running")
 
     " Remove the right-hand scrollbar.
     set guioptions-=r
+
+    " Static syntax checker.
+    autocmd BufWritePost *.py call Flake8()
 endif
 
 " Tab settings.
@@ -28,9 +31,6 @@ let NERDTreeShowHidden = 1
 
 " Remove trailing whitespace.
 autocmd BufWritePre * :%s/\s\+$//e
-
-" Static syntax checker.
-autocmd BufWritePost *.py call Flake8()
 
 " File types.
 autocmd BufNewFile,BufRead *.ccss setlocal ft=clevercss
