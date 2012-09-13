@@ -1,7 +1,7 @@
 color molokai
 
 if has("gui_running")
-    set transparency=5
+    set transparency=10
 
     " Remove the toolbar.
     set guioptions-=T
@@ -14,7 +14,13 @@ if has("gui_running")
     set guioptions-=r
 
     " Static syntax checker.
-    autocmd BufWritePost *.py call Flake8()
+    autocmd BufWritePost *.py call CheckPy()
+
+    function CheckPy()
+        if getline(1) == "# -*- coding: utf-8 -*-"
+            call Flake8()
+        endif
+    endfunction
 endif
 
 " Tab settings.
