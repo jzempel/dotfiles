@@ -1,4 +1,8 @@
-install: install-bash install-git install-vim
+install: install-ack install-bash install-git install-vim
+
+install-ack:
+	rm -f ~/.ackrc
+	ln -s `pwd`/ack/ackrc ~/.ackrc
 
 install-bash:
 	rm -f ~/.bashrc ~/.inputrc
