@@ -17,3 +17,7 @@
 [submodule "vim/janus/nerdtree-tabs"]
 	path = vim/janus/nerdtree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs
+
+[submodule "vim/janus/stylus"]
+	path = vim/janus/stylus
+	url = https://github.com/vim-scripts/vim-stylus
