@@ -35,6 +35,9 @@ set wildignore+=.DS_Store,*.egg,*.egg-info,*.py[co]
 let NERDTreeIgnore = ["\.DS_Store","\.egg","\.egg-info","\.py[co]"]
 let NERDTreeShowHidden = 1
 
+" Flake8 setting.
+let g:flake8_ignore="E128"
+
 " Remove trailing whitespace.
 autocmd BufWritePre * :%s/\s\+$//e
 

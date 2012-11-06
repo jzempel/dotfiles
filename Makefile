@@ -18,6 +18,7 @@ install-git:
 install-vim:
 	git submodule init
 	git submodule update
+	git submodule foreach git pull origin master
 	test -d ~/.vim || git clone https://github.com/carlhuda/janus.git ~/.vim
 	rm -rf ~/.janus ~/.vimrc.after
 	ln -s `pwd`/vim/janus ~/.janus
