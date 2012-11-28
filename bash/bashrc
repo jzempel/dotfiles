@@ -52,7 +52,7 @@ export PROMPT='\n${MAGENTA}\u${WHITE}@${YELLOW}\h\
 `prompt_virtualenv`\
 ${RESET}'
 export PS1="${PROMPT}
-$ "
+⌘ "
 
 # Aliases.
 
