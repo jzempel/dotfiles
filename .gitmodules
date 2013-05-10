@@ -14,10 +14,14 @@
 	path = vim/janus/jinja
 	url = https://github.com/vim-scripts/Jinja.git
 
+[submodule "vim/janus/nerdtree-ack"]
+	path = vim/janus/nerdtree-ack
+	url = https://github.com/vim-scripts/nerdtree-ack.git
+
 [submodule "vim/janus/nerdtree-tabs"]
 	path = vim/janus/nerdtree-tabs
-	url = https://github.com/jistr/vim-nerdtree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
 
 [submodule "vim/janus/stylus"]
 	path = vim/janus/stylus
-	url = https://github.com/vim-scripts/vim-stylus
+	url = https://github.com/vim-scripts/vim-stylus.git
