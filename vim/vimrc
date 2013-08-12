@@ -46,3 +46,8 @@ autocmd BufNewFile,BufRead *.ccss setlocal ft=clevercss
 autocmd BufNewFile,BufRead */*templates*.html setlocal ft=htmljinja.html textwidth=0
 autocmd Filetype ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype stylus setlocal shiftwidth=4
+
+" Local vimrc
+if filereadable('.vimrc.local')
+    source .vimrc.local
+endif
