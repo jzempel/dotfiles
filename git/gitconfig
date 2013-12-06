@@ -16,7 +16,7 @@
     publish = !legit publish \"$@\"
     graft = !legit graft \"$@\"
 [branch "master"]
-	rebase = true
+	rebase = preserve
 [color]
     ui = auto
 [format]
