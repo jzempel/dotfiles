@@ -43,7 +43,7 @@ prompt_virtualenv()
 
 VIRTUAL_ENV_DISABLE_PROMPT=1
 
-export VCPROMPT_FORMAT=" ${WHITE}on ${BLUE}%n${RESET}:%b${GREEN}%m%u"
+export VCPROMPT_FORMAT=" ${WHITE}on ${BLUE}%n${RESET}:%b${GREEN}%m%u${RESET}"
 export PROMPT='\n${MAGENTA}\u${WHITE}@${YELLOW}\h\
 `prompt_error $?`\
 `prompt_directory \w`\
