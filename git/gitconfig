@@ -15,13 +15,13 @@
     sync = !legit sync \"$@\"
     publish = !legit publish \"$@\"
     graft = !legit graft \"$@\"
-[branch "master"]
-	rebase = preserve
 [color]
     ui = auto
 [format]
     pretty = oneline
 [github]
     user = jzempel
+[pull]
+	rebase = preserve
 [push]
     default = current
