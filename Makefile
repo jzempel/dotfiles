@@ -6,10 +6,9 @@ install-ack:
 
 install-bash:
 	rm -f ~/.bashrc ~/.inputrc
-	sudo rm -f /etc/paths
 	ln -s `pwd`/bash/bashrc ~/.bashrc
 	ln -s `pwd`/bash/inputrc ~/.inputrc
-	sudo ln -s `pwd`/bash/paths /etc/paths
+	cat `pwd`/bash/paths | sudo tee /etc/paths
 	test ~/.bash_profile || ln -s `pwd`/bash/bash_profile ~/.bash_profile
 
 install-git:
