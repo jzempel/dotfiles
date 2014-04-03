@@ -31,11 +31,6 @@ prompt_error()
     [ $1 != 0 ] && echo -n " ${WHITE}error ${RED}$1"
 }
 
-prompt_rvm()
-{
-    [ -f $HOME/.rvm/bin/rvm-prompt ] && echo -n " ${RED}$(~/.rvm/bin/rvm-prompt i v g)"
-}
-
 prompt_version_control()
 {
     [ `stat -f "%Hd" $1` == 1 ] && echo -n "$(vcprompt)"
@@ -53,8 +48,7 @@ export PROMPT='\n${MAGENTA}\u${WHITE}@${YELLOW}\h\
 `prompt_error $?`\
 `prompt_directory \w`\
 `prompt_version_control \w`\
-`prompt_virtualenv \w`\
-`prompt_rvm`\
+`prompt_virtualenv`\
 ${RESET}'
 export PS1="${PROMPT}
 ⌘ "
@@ -75,8 +69,4 @@ fi
 
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source virtualenvwrapper.sh
-fi
-
-if [ -f $HOME/.rvm/scripts/rvm ]; then
-    source $HOME/.rvm/scripts/rvm
 fi
