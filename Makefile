@@ -12,8 +12,9 @@ install-bash:
 	test ~/.bash_profile || ln -s `pwd`/bash/bash_profile ~/.bash_profile
 
 install-git:
-	rm -f ~/.gitconfig ~/.gitignore
-	ln -s `pwd`/git/gitconfig ~/.gitconfig
+	mkdir -p ~/.config/git
+	rm -f ~/.config/git/config ~/.gitignore
+	ln -s `pwd`/git/gitconfig ~/.config/git/config
 	ln -s `pwd`/git/gitignore ~/.gitignore
 
 install-vim:
