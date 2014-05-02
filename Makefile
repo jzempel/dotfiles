@@ -17,6 +17,14 @@ install-git:
 	ln -s `pwd`/git/gitconfig ~/.config/git/config
 	ln -s `pwd`/git/gitignore ~/.gitignore
 
+install-osx:
+	defaults write com.apple.dock largesize -float 64.0
+	defaults write com.apple.dock magnification -boolean YES
+	defaults write com.apple.dock tilesize -int 32
+	killall Dock
+	defaults write com.apple.terminal "Default Window Settings" -string Pro
+	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+
 install-vim:
 	git submodule init
 	git submodule update
