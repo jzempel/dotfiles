@@ -25,6 +25,14 @@ install-osx:
 	defaults write com.apple.terminal "Default Window Settings" -string Pro
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
+install-python:
+	@pip &> /dev/null || sudo easy_install -U pip
+	sudo pip install -U flake8
+	sudo pip install -U pip
+	sudo pip install -U setuptools
+	sudo pip install -U virtualenvwrapper
+	sudo pip install -U yolk
+
 install-vim:
 	git submodule init
 	git submodule update
