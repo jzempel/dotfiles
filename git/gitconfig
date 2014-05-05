@@ -21,6 +21,8 @@
     pretty = oneline
 [github]
     user = jzempel
+[hub]
+    protocol = https
 [pull]
 	rebase = preserve
 [push]
