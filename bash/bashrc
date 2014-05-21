@@ -1,6 +1,7 @@
 # Exports.
 
 export CLICOLOR=1
+export JAVA_HOME=$(/usr/libexec/java_home)
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # Prompt.
