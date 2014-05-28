@@ -23,6 +23,7 @@ install-osx:
 	defaults write com.apple.dock tilesize -int 32
 	killall Dock
 	defaults write com.apple.terminal "Default Window Settings" -string Pro
+	defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 install-python:
