@@ -12,15 +12,6 @@ if has("gui_running")
 
     " Remove the right-hand scrollbar.
     set guioptions-=r
-
-    " Static syntax checker.
-    autocmd BufWritePost *.py call CheckPy()
-
-    function CheckPy()
-        if getline(1) == "# -*- coding: utf-8 -*-"
-            call Flake8()
-        endif
-    endfunction
 endif
 
 " Tab settings.
@@ -35,8 +26,11 @@ set wildignore+=.DS_Store,*.egg,*.egg-info,*.py[co]
 let NERDTreeIgnore = ["\.DS_Store","\.egg","\.egg-info","\.py[co]"]
 let NERDTreeShowHidden = 1
 
-" Flake8 setting.
-let g:flake8_ignore="E128"
+" Syntastic settings.
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_python_checkers = ["flake8"]
+let g:syntastic_python_flake8_quiet_messages = {"regex": "E128"}
+let g:syntastic_ruby_checkers = ["rubocop"]
 
 " Remove trailing whitespace.
 autocmd BufWritePre * :%s/\s\+$//e
