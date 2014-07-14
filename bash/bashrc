@@ -77,6 +77,10 @@ if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
     chruby ruby &> /dev/null
 fi
 
+if [ -f $HOME/.travis/travis.sh ]; then
+    source $HOME/.travis/travis.sh
+fi
+
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source virtualenvwrapper.sh
 fi
