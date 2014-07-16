@@ -19,9 +19,11 @@ install-git:
 
 install-osx:
 	defaults write com.apple.dock largesize -float 64.0
-	defaults write com.apple.dock magnification -boolean YES
+	defaults write com.apple.dock magnification -bool true
 	defaults write com.apple.dock tilesize -int 32
 	killall Dock
+	defaults write com.apple.finder QLEnableTextSelection -bool true
+	killall Finder
 	defaults write com.apple.terminal "Default Window Settings" -string Pro
 	defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
