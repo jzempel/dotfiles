@@ -1,3 +1,7 @@
+[submodule "vim/janus/editorconfig"]
+	path = vim/janus/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
+
 [submodule "vim/janus/flake8"]
 	path = vim/janus/flake8
 	url = https://github.com/vim-scripts/vim-flake8.git
