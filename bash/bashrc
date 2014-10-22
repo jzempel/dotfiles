@@ -18,7 +18,7 @@ RESET=$(tput sgr0)
 
 prompt_directory()
 {
-    directory=${1/#$HOME/\~}
+    directory=${PWD/#$HOME/\~}
     echo -n " ${WHITE}in ${GREEN}"
 
     if [ ${#directory} -gt 30 ]; then
@@ -35,7 +35,7 @@ prompt_error()
 
 prompt_version_control()
 {
-    [ `stat -f "%Hd" $1` == 1 ] && echo -n "$(vcprompt)"
+    [ `stat -f "%Hd" "$PWD"` == 1 ] && echo -n "$(vcprompt)"
 }
 
 prompt_virtualenv()
