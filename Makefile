@@ -18,13 +18,19 @@ install-git:
 	ln -s `pwd`/git/gitignore ~/.gitignore
 
 install-osx:
+	sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool false
+	killall SystemUIServer
 	defaults write com.apple.dock largesize -float 64.0
 	defaults write com.apple.dock magnification -bool true
 	defaults write com.apple.dock tilesize -int 32
 	killall Dock
+	defaults write com.apple.finder FXPreferredViewStyle clmv
+	defaults write com.apple.finder NewWindowTarget PfHm
+	defaults write com.apple.finder NewWindowTargetPath -string ~
 	defaults write com.apple.finder QLEnableTextSelection -bool true
 	killall Finder
 	defaults write com.apple.terminal "Default Window Settings" -string Pro
+	defaults write com.apple.terminal "Startup Window Settings" -string Pro
 	defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
