@@ -29,8 +29,12 @@ install-osx:
 	defaults write com.apple.finder NewWindowTargetPath -string ~
 	defaults write com.apple.finder QLEnableTextSelection -bool true
 	killall Finder
+	defaults write com.apple.safari HomePage -string https://www.google.com/
+	defaults write com.apple.safari NewTabBehavior -int 0
+	defaults write com.apple.safari NewWindowBehavior -int 0
 	defaults write com.apple.terminal "Default Window Settings" -string Pro
 	defaults write com.apple.terminal "Startup Window Settings" -string Pro
+	killall cfprefsd
 	defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
