@@ -32,6 +32,7 @@ install-osx:
 	defaults write com.apple.safari HomePage -string https://www.google.com/
 	defaults write com.apple.safari NewTabBehavior -int 0
 	defaults write com.apple.safari NewWindowBehavior -int 0
+	defaults write com.apple.screencapture location -string ~/Downloads
 	defaults write com.apple.terminal "Default Window Settings" -string Pro
 	defaults write com.apple.terminal "Startup Window Settings" -string Pro
 	killall cfprefsd
