@@ -18,6 +18,13 @@ install-git:
 	ln -s `pwd`/git/gitignore ~/.gitignore
 
 install-osx:
+	defaults write com.apple.systemuiserver menuExtras -array \
+		"/Applications/Utilities/Keychain Access.app/Contents/Resources/Keychain.menu" \
+		"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+		"/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
+		"/System/Library/CoreServices/Menu Extras/Battery.menu" \
+		"/System/Library/CoreServices/Menu Extras/Clock.menu"
 	sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool false
 	killall SystemUIServer
 	defaults write com.apple.dock largesize -float 64.0
