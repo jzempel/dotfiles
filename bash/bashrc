@@ -67,6 +67,10 @@ alias ..5="cd ../../../../.."
 
 if [ -f /opt/boxen/env.sh ]; then
     source /opt/boxen/env.sh
+
+    if [ -d $NODENV_ROOT/versions/$(nodenv version)/lib/node_modules ]; then
+        export NODE_PATH="$NODENV_ROOT/versions/$(nodenv version)/lib/node_modules:$NODE_PATH"
+    fi
 fi
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
