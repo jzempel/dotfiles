@@ -49,11 +49,12 @@ install-osx:
 
 install-python:
 	@pip &> /dev/null || sudo easy_install -U pip
-	sudo pip install -U flake8
-	sudo pip install -U pip
-	sudo pip install -U setuptools
-	sudo pip install -U virtualenvwrapper
-	sudo pip install -U yolk
+	sudo -H pip install -U flake8
+	sudo -H pip install -U pip
+	sudo -H pip install -U pytz
+	sudo -H pip install -U setuptools
+	sudo -H pip install -U virtualenvwrapper
+	sudo -H pip install -U yolk
 
 install-vim:
 	git submodule init
