@@ -41,6 +41,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 " File types.
 autocmd BufNewFile,BufRead *.ccss setlocal ft=clevercss
 autocmd BufNewFile,BufRead *.pp setlocal ft=ruby
+autocmd BufNewFile,BufRead *.tag setlocal ft=html
 autocmd BufNewFile,BufRead */*templates*.html setlocal ft=htmljinja.html textwidth=0
 autocmd Filetype ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype stylus setlocal shiftwidth=4
