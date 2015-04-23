@@ -7,14 +7,15 @@
 [credential]
     helper = osxkeychain
 [alias]
-    switch = !legit switch \"$@\"
     branches = !legit branches
-    sprout = !legit sprout \"$@\"
-    unpublish = !legit unpublish \"$@\"
-    harvest = !legit harvest \"$@\"
-    sync = !legit sync \"$@\"
-    publish = !legit publish \"$@\"
     graft = !legit graft \"$@\"
+    harvest = !legit harvest \"$@\"
+    pkgtag = !$HOME/Dropbox/Library/pkgtag
+    publish = !legit publish \"$@\"
+    sprout = !legit sprout \"$@\"
+    switch = !legit switch \"$@\"
+    sync = !legit sync \"$@\"
+    unpublish = !legit unpublish \"$@\"
 [color]
     ui = auto
 [format]
