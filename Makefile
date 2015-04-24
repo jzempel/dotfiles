@@ -4,6 +4,21 @@ install-ack:
 	rm -f ~/.ackrc
 	ln -s `pwd`/ack/ackrc ~/.ackrc
 
+install-brew:
+	test brew || ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	brew update
+	brew reinstall ack
+	brew reinstall bash-completion
+	brew reinstall findutils
+	brew reinstall git
+	brew reinstall git-extras
+	brew reinstall hub
+	brew reinstall macvim
+	brew reinstall vcprompt
+	brew reinstall caskroom/cask/brew-cask
+	brew tap jzempel/formula && brew reinstall continuity
+	brew cleanup
+
 install-bash:
 	rm -f ~/.bashrc ~/.inputrc
 	ln -s `pwd`/bash/bashrc ~/.bashrc
@@ -55,6 +70,10 @@ install-python:
 	sudo -H pip install -U setuptools
 	sudo -H pip install -U virtualenvwrapper
 	sudo -H pip install -U yolk
+
+install-ruby:
+	gem install bundler
+	gem install scss-lint
 
 install-vim:
 	git submodule init
