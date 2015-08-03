@@ -13,6 +13,7 @@ install-brew:
 	brew reinstall git
 	brew reinstall git-extras
 	brew reinstall hub
+	brew reinstall node
 	brew reinstall macvim
 	brew reinstall vcprompt
 	brew tap caskroom/cask && brew reinstall brew-cask
@@ -31,6 +32,13 @@ install-git:
 	rm -f ~/.config/git/config ~/.gitignore
 	ln -s `pwd`/git/gitconfig ~/.config/git/config
 	ln -s `pwd`/git/gitignore ~/.gitignore
+
+install-node:
+	which node || brew install node
+	npm update -g
+	npm install -g bower
+	npm install -g eslint
+	npm install -g grunt-cli
 
 install-osx:
 	defaults write com.apple.systemuiserver menuExtras -array \
@@ -72,8 +80,8 @@ install-python:
 	sudo -H pip install -U yolk
 
 install-ruby:
-	gem install bundler
-	gem install scss-lint
+	sudo gem install -u bundler
+	sudo gem install -u scss_lint
 
 install-vim:
 	git submodule init
