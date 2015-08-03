@@ -5,7 +5,7 @@ install-ack:
 	ln -s `pwd`/ack/ackrc ~/.ackrc
 
 install-brew:
-	test brew || ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	which brew || ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew update
 	brew reinstall ack
 	brew reinstall bash-completion
@@ -15,7 +15,7 @@ install-brew:
 	brew reinstall hub
 	brew reinstall macvim
 	brew reinstall vcprompt
-	brew reinstall caskroom/cask/brew-cask
+	brew tap caskroom/cask && brew reinstall brew-cask
 	brew tap jzempel/formula && brew reinstall continuity
 	brew cleanup
 
