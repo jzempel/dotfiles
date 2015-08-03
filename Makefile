@@ -63,7 +63,7 @@ install-osx:
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 install-python:
-	@pip &> /dev/null || sudo easy_install -U pip
+	which pip || sudo easy_install -U pip
 	sudo -H pip install -U flake8
 	sudo -H pip install -U pip
 	sudo -H pip install -U pytz
