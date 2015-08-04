@@ -89,3 +89,7 @@ fi
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source virtualenvwrapper.sh
 fi
+
+if [ -f $HOME/Code/zendesk/docker-images/dockmaster/zdi.sh ]; then
+    source $HOME/Code/zendesk/docker-images/dockmaster/zdi.sh
+fi
