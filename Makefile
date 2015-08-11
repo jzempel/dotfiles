@@ -16,6 +16,7 @@ install-brew:
 	brew reinstall node
 	brew reinstall macvim
 	brew reinstall vcprompt
+	brew reinstall watchman
 	brew tap caskroom/cask && brew reinstall brew-cask
 	brew tap jzempel/formula && brew reinstall continuity
 	brew cleanup
