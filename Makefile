@@ -40,6 +40,7 @@ install-node:
 	npm install -g bower
 	npm install -g eslint
 	npm install -g grunt-cli
+	npm install -g svgo
 
 install-osx:
 	defaults write com.apple.systemuiserver menuExtras -array \
