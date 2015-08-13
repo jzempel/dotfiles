@@ -36,11 +36,12 @@ install-git:
 
 install-node:
 	which node || brew install node
-	npm update -g
+	npm install -g npm
 	npm install -g bower
 	npm install -g eslint
 	npm install -g grunt-cli
 	npm install -g svgo
+	which meteor || curl https://install.meteor.com | sh
 
 install-osx:
 	defaults write com.apple.systemuiserver menuExtras -array \
