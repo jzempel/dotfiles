@@ -85,6 +85,7 @@ install-python:
 install-ruby:
 	sudo gem install -u bundler
 	sudo gem install -u scss_lint
+	sudo gem install -u travis-lint
 
 install-vim:
 	git submodule init
