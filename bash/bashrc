@@ -82,6 +82,11 @@ if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
     chruby ruby &> /dev/null
 fi
 
+if [ -f $HOME/.rvm/scripts/rvm ]; then
+    source $HOME/.rvm/scripts/rvm
+    export PATH="$HOME/.rvm/bin:$PATH"
+fi
+
 if [ -f $HOME/.travis/travis.sh ]; then
     source $HOME/.travis/travis.sh
 fi

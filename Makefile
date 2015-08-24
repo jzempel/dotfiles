@@ -86,6 +86,7 @@ install-ruby:
 	sudo gem install -u bundler
 	sudo gem install -u scss_lint
 	sudo gem install -u travis-lint
+	which rvm || curl -sSL https://get.rvm.io | bash -s stable
 
 install-vim:
 	git submodule init
