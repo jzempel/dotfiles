@@ -13,8 +13,9 @@ install-brew:
 	brew reinstall git
 	brew reinstall git-extras
 	brew reinstall hub
-	brew reinstall node
 	brew reinstall macvim
+	brew reinstall node
+	brew reinstall phantomjs
 	brew reinstall vcprompt
 	brew reinstall watchman
 	brew tap caskroom/cask && brew reinstall brew-cask
