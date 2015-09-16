@@ -22,6 +22,8 @@
     pretty = oneline
 [github]
     user = jzempel
+[github "template"]
+	branch-prefix = {{ github.user }}/
 [hub]
     protocol = https
 [pull]
