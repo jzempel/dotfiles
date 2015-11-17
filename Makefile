@@ -15,7 +15,6 @@ install-brew:
 	brew reinstall hub
 	brew reinstall macvim
 	brew reinstall node
-	brew reinstall phantomjs
 	brew reinstall vcprompt
 	brew reinstall watchman
 	brew tap caskroom/cask && brew reinstall brew-cask
@@ -67,6 +66,7 @@ install-osx:
 	defaults write com.apple.safari NewTabBehavior -int 0
 	defaults write com.apple.safari NewWindowBehavior -int 0
 	defaults write com.apple.screencapture location -string ~/Downloads
+	defaults write com.apple.Terminal AutoMarkPromptLines -int 0
 	defaults write com.apple.terminal "Default Window Settings" -string Pro
 	defaults write com.apple.terminal "Startup Window Settings" -string Pro
 	killall cfprefsd
