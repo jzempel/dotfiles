@@ -74,13 +74,13 @@ install-osx:
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 install-python:
-	which pip || sudo easy_install -U pip
-	sudo -H pip install -U flake8
-	sudo -H pip install -U pip
-	sudo -H pip install -U pytz
-	sudo -H pip install -U setuptools
-	sudo -H pip install -U virtualenvwrapper
-	sudo -H pip install -U yolk
+	which pip || easy_install --user -U pip
+	pip install --user -U flake8
+	pip install --user -U pip
+	pip install --user -U pytz
+	pip install --user -U setuptools
+	pip install --user -U virtualenvwrapper
+	pip install --user -U yolk
 
 install-ruby:
 	sudo gem install -u bundler
