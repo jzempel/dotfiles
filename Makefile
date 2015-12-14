@@ -15,6 +15,7 @@ install-brew:
 	brew reinstall hub
 	brew reinstall macvim
 	brew reinstall node
+	brew reinstall rename
 	brew reinstall vcprompt
 	brew reinstall watchman
 	brew tap caskroom/cask && brew reinstall brew-cask
