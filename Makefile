@@ -10,6 +10,7 @@ install-brew:
 	brew reinstall ack
 	brew reinstall bash-completion
 	brew reinstall findutils
+	brew reinstall fop
 	brew reinstall git
 	brew reinstall git-extras
 	brew reinstall hub
@@ -67,6 +68,7 @@ install-osx:
 	defaults write com.apple.safari NewTabBehavior -int 0
 	defaults write com.apple.safari NewWindowBehavior -int 0
 	defaults write com.apple.screencapture location -string ~/Downloads
+	defaults write com.apple.smb.server NetBIOSName -string $USER
 	defaults write com.apple.Terminal AutoMarkPromptLines -int 0
 	defaults write com.apple.terminal "Default Window Settings" -string Pro
 	defaults write com.apple.terminal "Startup Window Settings" -string Pro
