@@ -40,9 +40,6 @@ install-git:
 install-node:
 	which node || brew install node
 	npm install -g npm
-	npm install -g bower
-	npm install -g eslint
-	npm install -g svgo
 	which meteor || curl https://install.meteor.com | sh
 
 install-osx:
@@ -53,6 +50,7 @@ install-osx:
 		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
 		"/System/Library/CoreServices/Menu Extras/Battery.menu" \
 		"/System/Library/CoreServices/Menu Extras/Clock.menu"
+	defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 	sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool false
 	killall SystemUIServer
 	defaults write com.apple.dock largesize -float 64.0
