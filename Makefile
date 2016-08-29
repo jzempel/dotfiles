@@ -61,6 +61,7 @@ install-osx:
 	defaults write com.apple.finder NewWindowTarget PfHm
 	defaults write com.apple.finder NewWindowTargetPath -string ~
 	defaults write com.apple.finder QLEnableTextSelection -bool true
+	defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  h:mm a"
 	killall Finder
 	defaults write com.apple.safari HomePage -string https://www.google.com/
 	defaults write com.apple.safari IncludeDevelopMenu -bool true
