@@ -20,7 +20,6 @@ install-brew:
 	brew reinstall rename
 	brew reinstall vcprompt
 	brew reinstall watchman
-	brew tap caskroom/cask && brew reinstall brew-cask
 	brew tap jzempel/formula && brew reinstall continuity
 	brew cleanup
 
@@ -40,7 +39,6 @@ install-git:
 install-node:
 	which node || brew install node
 	npm install -g npm
-	which meteor || curl https://install.meteor.com | sh
 
 install-osx:
 	defaults write com.apple.systemuiserver menuExtras -array \
