@@ -82,6 +82,12 @@ if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
     chruby ruby &> /dev/null
 fi
 
+if [ -f $(brew --prefix nvm)/nvm.sh ]; then
+    mkdir -p $HOME/.nvm
+    export NVM_DIR="$HOME/.nvm"
+    source $(brew --prefix nvm)/nvm.sh
+fi
+
 if [ -f $HOME/.rvm/scripts/rvm ]; then
     source $HOME/.rvm/scripts/rvm
     export PATH="$HOME/.rvm/bin:$PATH"
