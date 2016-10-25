@@ -48,6 +48,7 @@ install-osx:
 		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
 		"/System/Library/CoreServices/Menu Extras/Battery.menu" \
 		"/System/Library/CoreServices/Menu Extras/Clock.menu"
+	defaults write -g AppleShowScrollBars -string Automatic
 	defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 	sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool false
 	killall SystemUIServer
@@ -67,7 +68,7 @@ install-osx:
 	defaults write com.apple.safari NewWindowBehavior -int 0
 	defaults write com.apple.screencapture location -string ~/Downloads
 	defaults write com.apple.smb.server NetBIOSName -string $USER
-	defaults write com.apple.Terminal AutoMarkPromptLines -int 0
+	defaults write com.apple.terminal AutoMarkPromptLines -int 0
 	defaults write com.apple.terminal "Default Window Settings" -string Pro
 	defaults write com.apple.terminal "Startup Window Settings" -string Pro
 	killall cfprefsd
