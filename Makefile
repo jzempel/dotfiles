@@ -83,6 +83,9 @@ install-python:
 	pip install --user -U pytz
 	pip install --user -U setuptools
 	pip install --user -U virtualenvwrapper
+	rm -f /usr/local/bin/virtualenv /usr/local/bin/virtualenvwrapper.sh
+	ln -s ~/Library/Python/2.7/bin/virtualenv /usr/local/bin/virtualenv
+	ln -s ~/Library/Python/2.7/bin/virtualenvwrapper.sh /usr/local/bin/virtualenvwrapper.sh
 	pip install --user -U yolk
 
 install-ruby:
