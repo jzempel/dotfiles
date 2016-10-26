@@ -39,6 +39,7 @@ let g:syntastic_scss_checkers = ["scss_lint"]
 autocmd BufWritePre * :%s/\s\+$//e
 
 " File types.
+autocmd BufNewFile,BufRead Makefile setlocal noexpandtab
 autocmd BufNewFile,BufRead *.ccss setlocal ft=clevercss
 autocmd BufNewFile,BufRead *.pp setlocal ft=ruby
 autocmd BufNewFile,BufRead *.tag setlocal ft=html

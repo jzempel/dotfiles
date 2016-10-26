@@ -23,10 +23,12 @@
 [github]
     user = jzempel
 [github "template"]
-	branch-prefix = {{ github.user }}/
+    branch-prefix = {{ github.user }}/
 [hub]
     protocol = https
+[include]
+    path = ~/.gitconfig.private
 [pull]
-	rebase = preserve
+    rebase = preserve
 [push]
     default = current
