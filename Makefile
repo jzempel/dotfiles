@@ -1,4 +1,4 @@
-install: install-ack install-bash install-git install-vim
+install: install-osx install-ack install-bash install-git install-vim
 
 install-ack:
 	rm -f ~/.ackrc
@@ -41,6 +41,7 @@ install-node:
 	npm install -g npm
 
 install-osx:
+	echo "$$USER	ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
 	defaults write com.apple.systemuiserver menuExtras -array \
 		"/Applications/Utilities/Keychain Access.app/Contents/Resources/Keychain.menu" \
 		"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
