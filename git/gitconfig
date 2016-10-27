@@ -6,16 +6,6 @@
     excludesfile = ~/.gitignore
 [credential]
     helper = osxkeychain
-[alias]
-    branches = !legit branches
-    graft = !legit graft \"$@\"
-    harvest = !legit harvest \"$@\"
-    pkgtag = !$HOME/Dropbox/Library/pkgtag
-    publish = !legit publish \"$@\"
-    sprout = !legit sprout \"$@\"
-    switch = !legit switch \"$@\"
-    sync = !legit sync \"$@\"
-    unpublish = !legit unpublish \"$@\"
 [color]
     ui = auto
 [format]
