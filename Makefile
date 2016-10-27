@@ -1,10 +1,14 @@
-install: install-osx install-ack install-bash install-git install-vim
+.PHONY: ack bash git vim
 
-install-ack:
+install: osx ack bash git vim
+
+all: brew install node python ruby
+
+ack:
 	rm -f ~/.ackrc
 	ln -s `pwd`/ack/ackrc ~/.ackrc
 
-install-brew:
+brew:
 	which brew || ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew update
 	brew reinstall ack
@@ -23,25 +27,25 @@ install-brew:
 	brew tap jzempel/formula && brew reinstall continuity
 	brew cleanup
 
-install-bash:
+bash:
 	rm -f ~/.bashrc ~/.inputrc
 	ln -s `pwd`/bash/bashrc ~/.bashrc
 	ln -s `pwd`/bash/inputrc ~/.inputrc
 	cat `pwd`/bash/paths | sudo tee /etc/paths
 	test ~/.bash_profile || ln -s `pwd`/bash/bash_profile ~/.bash_profile
 
-install-git:
+git:
 	mkdir -p ~/.config/git
 	rm -f ~/.config/git/config ~/.gitignore
 	ln -s `pwd`/git/gitconfig ~/.config/git/config
 	ln -s `pwd`/git/gitignore ~/.gitignore
 
-install-node:
+node:
 	which node || brew install node
 	npm install -g npm
 
-install-osx:
-	echo "$$USER	ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
+osx:
+	sudo grep -q "$$USER" /etc/sudoers || echo "$$USER	ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
 	defaults write com.apple.systemuiserver menuExtras -array \
 		"/Applications/Utilities/Keychain Access.app/Contents/Resources/Keychain.menu" \
 		"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
@@ -76,7 +80,7 @@ install-osx:
 	defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
-install-python:
+python:
 	which pip || easy_install --user -U pip
 	pip install --user -U flake8
 	pip install --user -U pip
@@ -88,13 +92,13 @@ install-python:
 	ln -s ~/Library/Python/2.7/bin/virtualenvwrapper.sh /usr/local/bin/virtualenvwrapper.sh
 	pip install --user -U yolk
 
-install-ruby:
+ruby:
 	sudo gem install -u bundler
 	sudo gem install -u scss_lint
 	sudo gem install -u travis-lint
 	which rvm || curl -sSL https://get.rvm.io | bash -s stable
 
-install-vim:
+vim:
 	git submodule init
 	git submodule update
 	git submodule foreach git pull origin master
