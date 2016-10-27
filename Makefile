@@ -32,7 +32,7 @@ bash:
 	ln -s `pwd`/bash/bashrc ~/.bashrc
 	ln -s `pwd`/bash/inputrc ~/.inputrc
 	cat `pwd`/bash/paths | sudo tee /etc/paths
-	test ~/.bash_profile || ln -s `pwd`/bash/bash_profile ~/.bash_profile
+	test -f ~/.bash_profile || ln -s `pwd`/bash/bash_profile ~/.bash_profile
 
 git:
 	mkdir -p ~/.config/git
