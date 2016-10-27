@@ -27,7 +27,7 @@
 [hub]
     protocol = https
 [include]
-    path = ~/.gitconfig.private
+    path = /Users/jzempel/.gitconfig.private
 [pull]
     rebase = preserve
 [push]
