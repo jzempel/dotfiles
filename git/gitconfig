@@ -18,6 +18,8 @@
     protocol = https
 [include]
     path = /Users/jzempel/.gitconfig.private
+[init]
+    templatedir = ~/.git
 [pull]
     rebase = preserve
 [push]
