@@ -11,6 +11,7 @@ ack:
 brew:
 	which brew || ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew update
+	brew cask reinstall qlmarkdown
 	brew reinstall ack
 	brew reinstall bash-completion
 	brew reinstall findutils
