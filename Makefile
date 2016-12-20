@@ -1,4 +1,4 @@
-.PHONY: ack bash git vim
+.PHONY: ack bash brew git vim
 
 install: osx ack bash git vim
 
@@ -26,7 +26,7 @@ brew:
 	brew reinstall rename
 	brew reinstall vcprompt
 	brew reinstall watchman
-	brew tap jzempel/formula && brew reinstall continuity
+	brew tap jzempel/formula && brew install continuity
 	brew cleanup
 
 bash:
