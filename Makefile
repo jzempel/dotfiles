@@ -11,6 +11,7 @@ ack:
 brew:
 	which brew || ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew update
+	brew cask reinstall java
 	brew cask reinstall qlmarkdown
 	brew reinstall ack
 	brew reinstall bash-completion
@@ -48,6 +49,7 @@ node:
 
 osx:
 	sudo grep -q "$$USER" /etc/sudoers || echo "$$USER	ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
+	sudo scutil --set HostName "$$USER"
 	defaults write com.apple.systemuiserver menuExtras -array \
 		"/Applications/Utilities/Keychain Access.app/Contents/Resources/Keychain.menu" \
 		"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
@@ -55,7 +57,7 @@ osx:
 		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
 		"/System/Library/CoreServices/Menu Extras/Battery.menu" \
 		"/System/Library/CoreServices/Menu Extras/Clock.menu"
-	defaults write -g AppleShowScrollBars -string Automatic
+	defaults write NSGlobalDomain AppleShowScrollBars -string WhenScrolling
 	defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 	sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool false
 	killall SystemUIServer
@@ -80,6 +82,7 @@ osx:
 	defaults write com.apple.terminal "Startup Window Settings" -string Pro
 	killall cfprefsd
 	defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+	sudo rm -f /Library/Caches/com.apple.desktop.admin.png
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 python:
