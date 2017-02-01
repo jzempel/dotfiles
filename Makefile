@@ -49,6 +49,7 @@ node:
 
 osx:
 	sudo grep -q "$$USER" /etc/sudoers || echo "$$USER	ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
+	sudo scutil --set ComputerName "$$USER"
 	sudo scutil --set HostName "$$USER"
 	defaults write com.apple.systemuiserver menuExtras -array \
 		"/Applications/Utilities/Keychain Access.app/Contents/Resources/Keychain.menu" \
