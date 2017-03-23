@@ -47,6 +47,9 @@ autocmd BufNewFile,BufRead */*templates*.html setlocal ft=htmljinja.html textwid
 autocmd Filetype ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype stylus setlocal shiftwidth=4
 
+" Key mappings.
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
+
 " Local vimrc
 if filereadable('.vimrc.local')
     source .vimrc.local
