@@ -27,6 +27,7 @@ brew:
 	brew reinstall rename
 	brew reinstall vcprompt
 	brew reinstall watchman
+	brew reinstall yarn
 	brew tap jzempel/formula && brew install continuity
 	brew cleanup
 
