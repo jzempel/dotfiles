@@ -59,7 +59,7 @@ osx:
 		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
 		"/System/Library/CoreServices/Menu Extras/Battery.menu" \
 		"/System/Library/CoreServices/Menu Extras/Clock.menu"
-	defaults write NSGlobalDomain AppleShowScrollBars -string WhenScrolling
+	defaults write NSGlobalDomain AppleShowScrollBars -string Automatic
 	defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 	sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool false
 	killall SystemUIServer
