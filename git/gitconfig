@@ -20,6 +20,8 @@
     path = /Users/jzempel/.gitconfig.private
 [init]
     templatedir = ~/.git
+[merge]
+    ff = false
 [pull]
     rebase = preserve
 [push]
