@@ -25,6 +25,7 @@ set wildignore+=.DS_Store,*.egg,*.egg-info,*.py[co],log,tmp
 " NERDTree setting.
 let NERDTreeIgnore = ["\.DS_Store","\.egg","\.egg-info","\.py[co]"]
 let NERDTreeShowHidden = 1
+let NERDTreeShowLineNumbers = 1
 
 " Syntastic settings.
 let g:syntastic_auto_loc_list = 1
