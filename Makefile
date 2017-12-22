@@ -29,6 +29,7 @@ brew:
 	brew reinstall watchman
 	brew reinstall yarn
 	brew tap jzempel/formula && brew install continuity
+	brew upgrade
 	brew cleanup
 
 bash:
