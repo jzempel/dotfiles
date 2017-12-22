@@ -26,3 +26,4 @@
     rebase = preserve
 [push]
     default = current
+    followtags = true
