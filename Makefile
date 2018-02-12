@@ -28,7 +28,6 @@ brew:
 	brew reinstall vcprompt
 	brew reinstall watchman
 	brew reinstall yarn
-	brew tap jzempel/formula && brew install continuity
 	brew upgrade
 	brew cleanup
 
@@ -90,16 +89,16 @@ osx:
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 python:
-	which pip || easy_install --user -U pip
-	pip install --user -U flake8
-	pip install --user -U pip
-	pip install --user -U pytz
-	pip install --user -U setuptools
-	pip install --user -U virtualenvwrapper
+	which pip2 || easy_install --user -U pip
+	pip2 install --user -U flake8
+	pip2 install --user -U pip
+	pip2 install --user -U pytz
+	pip2 install --user -U setuptools
+	pip2 install --user -U virtualenvwrapper
 	rm -f /usr/local/bin/virtualenv /usr/local/bin/virtualenvwrapper.sh
 	ln -s ~/Library/Python/2.7/bin/virtualenv /usr/local/bin/virtualenv
 	ln -s ~/Library/Python/2.7/bin/virtualenvwrapper.sh /usr/local/bin/virtualenvwrapper.sh
-	pip install --user -U yolk
+	pip2 install --user -U yolk
 
 ruby:
 	sudo gem install -u bundler
