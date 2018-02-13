@@ -27,3 +27,5 @@
 [push]
     default = current
     followtags = true
+[remote "origin"]
+    prune = true
