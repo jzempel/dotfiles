@@ -65,21 +65,8 @@ alias ..5="cd ../../../../.."
 
 # Tools.
 
-if [ -f /opt/boxen/env.sh ]; then
-    source /opt/boxen/env.sh
-
-    if [ -d $NODENV_ROOT/versions/$(nodenv version)/lib/node_modules ]; then
-        export NODE_PATH="$NODENV_ROOT/versions/$(nodenv version)/lib/node_modules:$NODE_PATH"
-    fi
-fi
-
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    source $(brew --prefix)/etc/bash_completion
-fi
-
-if [ -f /usr/local/opt/chruby/share/chruby/chruby.sh ]; then
-    source /usr/local/opt/chruby/share/chruby/chruby.sh
-    chruby ruby &> /dev/null
+    LANG=C source $(brew --prefix)/etc/bash_completion
 fi
 
 if [ -f $(brew --prefix nvm)/nvm.sh ]; then
@@ -99,8 +86,4 @@ fi
 
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source virtualenvwrapper.sh
-fi
-
-if [ -f $HOME/Code/zendesk/docker-images/dockmaster/zdi.sh ]; then
-    source $HOME/Code/zendesk/docker-images/dockmaster/zdi.sh
 fi
