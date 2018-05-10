@@ -24,6 +24,7 @@ brew:
 	brew reinstall hub
 	brew reinstall macvim
 	brew reinstall node
+	brew reinstall nvm
 	brew reinstall rename
 	brew reinstall vcprompt
 	brew reinstall watchman
