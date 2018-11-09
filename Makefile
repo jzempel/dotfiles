@@ -19,7 +19,6 @@ brew:
 	brew reinstall fop
 	brew reinstall git
 	brew reinstall git-extras
-	brew reinstall git-lfs
 	brew reinstall hardlink-osx
 	brew reinstall hub
 	brew reinstall macvim
