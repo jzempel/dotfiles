@@ -84,7 +84,6 @@ osx:
 	defaults write com.apple.terminal "Default Window Settings" -string Pro
 	defaults write com.apple.terminal "Startup Window Settings" -string Pro
 	killall cfprefsd
-	defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 	sudo rm -f /Library/Caches/com.apple.desktop.admin.png
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
