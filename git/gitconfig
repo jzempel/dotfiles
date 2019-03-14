@@ -2,7 +2,7 @@
     email = jzempel@gmail.com
     name = Jonathan Zempel
 [core]
-    editor = mvim -f
+    editor = code --wait
     excludesfile = ~/.gitignore
 [credential]
     helper = osxkeychain
