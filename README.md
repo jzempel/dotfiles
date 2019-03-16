@@ -16,7 +16,6 @@ Vim configuration assumes an installation of
     1. Start as New User
     1. Open Dropbox agile keychain
     1. Sign into 1P account
-* Run `git` to install command line developer tools.
 * Change to the `Public` directory and `git clone https://github.com/jzempel/dotfiles.git`.
 * Change to the `dotfiles` directory and `make all`.
 * Login to iCloud.
