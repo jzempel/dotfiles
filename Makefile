@@ -1,6 +1,6 @@
 .PHONY: ack bash brew git vim
 
-install: osx ack bash git vim
+install: macos ack bash git vim
 
 all: brew install node python ruby
 
@@ -13,6 +13,7 @@ brew:
 	brew update
 	brew cask reinstall java
 	brew cask reinstall qlmarkdown
+	brew cask reinstall visual-studio-code
 	brew reinstall ack
 	brew reinstall bash-completion
 	brew reinstall findutils
@@ -24,6 +25,7 @@ brew:
 	brew reinstall macvim
 	brew reinstall node
 	brew reinstall nvm
+	brew reinstall python
 	brew reinstall rename
 	brew reinstall vcprompt
 	brew reinstall watchman
@@ -48,7 +50,7 @@ node:
 	which node || brew install node
 	npm install -g npm
 
-osx:
+macos:
 	sudo grep -q "$$USER" /etc/sudoers || echo "$$USER	ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
 	sudo scutil --set ComputerName "$$USER"
 	sudo scutil --set HostName "$$USER"
@@ -93,20 +95,17 @@ osx:
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 python:
-	which pip2 || easy_install --user -U pip
-	pip2 install --user -U flake8
-	pip2 install --user -U pip
-	pip2 install --user -U pytz
-	pip2 install --user -U setuptools
-	pip2 install --user -U virtualenvwrapper
+	pip3 install -U flake8
+	pip3 install -U pytz
+	pip3 install -U setuptools
+	pip3 install -U virtualenvwrapper
 	rm -f /usr/local/bin/virtualenv /usr/local/bin/virtualenvwrapper.sh
 	ln -s ~/Library/Python/2.7/bin/virtualenv /usr/local/bin/virtualenv
 	ln -s ~/Library/Python/2.7/bin/virtualenvwrapper.sh /usr/local/bin/virtualenvwrapper.sh
-	pip2 install --user -U yolk
+	pip3 install -U yolk
 
 ruby:
 	sudo gem install -u bundler
-	sudo gem install -u scss_lint
 	sudo gem install -u travis-lint
 	(which rvm && rvm get stable) || curl -sSL https://get.rvm.io | bash -s stable
 
