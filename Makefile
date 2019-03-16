@@ -98,9 +98,6 @@ python:
 	pip3 install -U pytz
 	pip3 install -U setuptools
 	pip3 install -U virtualenvwrapper
-	rm -f /usr/local/bin/virtualenv /usr/local/bin/virtualenvwrapper.sh
-	ln -s ~/Library/Python/2.7/bin/virtualenv /usr/local/bin/virtualenv
-	ln -s ~/Library/Python/2.7/bin/virtualenvwrapper.sh /usr/local/bin/virtualenvwrapper.sh
 	pip3 install -U yolk
 
 ruby:
