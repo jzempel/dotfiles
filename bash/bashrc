@@ -85,5 +85,6 @@ if [ -f $HOME/.travis/travis.sh ]; then
 fi
 
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    export VIRTUALENVWRAPPER_PYTHON=$(which python3)
     source virtualenvwrapper.sh
 fi
