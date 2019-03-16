@@ -1,8 +1,8 @@
 # My public dot files
 
-The extravagant bash prompt relies on [vcprompt](http://vcprompt.com). The
-Vim configuration assumes an installation of
-[Janus](https://github.com/carlhuda/janus).
+The extravagant bash prompt relies on
+[vcprompt](https://bitbucket.org/gward/vcprompt). The Vim configuration
+assumes an installation of [Janus](https://github.com/carlhuda/janus).
 
 ## Setup a new [compy](https://youtu.be/--wlEf0TWQw)
 
