@@ -52,6 +52,8 @@ osx:
 	sudo grep -q "$$USER" /etc/sudoers || echo "$$USER	ALL=(ALL) NOPASSWD: ALL" | sudo tee -a /etc/sudoers
 	sudo scutil --set ComputerName "$$USER"
 	sudo scutil --set HostName "$$USER"
+	defaults write com.apple.menuextra.battery ShowPercent -string "NO"
+	defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  h:mm a"
 	defaults write com.apple.systemuiserver menuExtras -array \
 		"/Applications/Utilities/Keychain Access.app/Contents/Resources/Keychain.menu" \
 		"/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
@@ -63,16 +65,18 @@ osx:
 	defaults write NSGlobalDomain AppleShowScrollBars -string Automatic
 	defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 	sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool false
+	sudo defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool false
 	killall SystemUIServer
 	defaults write com.apple.dock largesize -float 64.0
 	defaults write com.apple.dock magnification -bool true
+	defaults write com.apple.dock show-recents -bool false
 	defaults write com.apple.dock tilesize -int 32
 	killall Dock
+	defaults write com.apple.finder DownloadsFolderListViewSettingsVersion -int 1
 	defaults write com.apple.finder FXPreferredViewStyle clmv
 	defaults write com.apple.finder NewWindowTarget PfHm
 	defaults write com.apple.finder NewWindowTargetPath -string ~
 	defaults write com.apple.finder QLEnableTextSelection -bool true
-	defaults write com.apple.menuextra.clock DateFormat -string "EEE MMM d  h:mm a"
 	chflags nohidden ~/Library/
 	killall Finder
 	defaults write com.apple.safari HomePage -string https://www.google.com/
