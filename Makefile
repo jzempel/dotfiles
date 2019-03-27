@@ -80,6 +80,7 @@ macos:
 	defaults write com.apple.finder NewWindowTargetPath -string ~
 	defaults write com.apple.finder QLEnableTextSelection -bool true
 	killall Finder
+	defaults write com.apple.itunes dontAutomaticallySyncIPods -bool true
 	defaults write com.apple.safari HomePage -string https://www.google.com/
 	defaults write com.apple.safari IncludeDevelopMenu -bool true
 	defaults write com.apple.safari NewTabBehavior -int 0
