@@ -90,6 +90,7 @@ macos:
 	defaults write com.apple.terminal AutoMarkPromptLines -int 0
 	defaults write com.apple.terminal "Default Window Settings" -string Pro
 	defaults write com.apple.terminal "Startup Window Settings" -string Pro
+	defaults write com.google.chrome AppleEnableSwipeNavigateWithScrolls -bool false
 	killall cfprefsd
 	sudo rm -f /Library/Caches/com.apple.desktop.admin.png
 	sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
