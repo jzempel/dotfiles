@@ -2,7 +2,7 @@
 
 install: macos ack bash git vim
 
-all: brew install node python ruby
+all: brew install node
 
 ack:
 	rm -f ~/.ackrc
