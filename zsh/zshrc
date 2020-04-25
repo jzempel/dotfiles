@@ -12,6 +12,7 @@ ZSH_THEME="robbyrussell"
 
 plugins=(
     git
+    git-prompt
     github
 )
 

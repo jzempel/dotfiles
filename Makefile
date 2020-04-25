@@ -33,11 +33,6 @@ brew:
 	brew upgrade
 	brew cleanup
 
-zsh:
-	test -d ~/.oh-my-zsh || sh -c "$$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-	rm -f ~/.zshrc*
-	ln -s `pwd`/zsh/zshrc ~/.zshrc
-
 bash:
 	rm -f ~/.bashrc ~/.inputrc
 	ln -s `pwd`/bash/bashrc ~/.bashrc
@@ -114,11 +109,15 @@ ruby:
 
 vim:
 	git submodule init
-	git submodule update
-	git submodule foreach git pull origin master
+	git submodule update --remote --merge
 	test -d ~/.vim || git clone https://github.com/carlhuda/janus.git ~/.vim
 	cd ~/.vim && rake
 	rm -rf ~/.janus ~/.vimrc.after
 	ln -s `pwd`/vim/janus ~/.janus
 	ln -s `pwd`/vim/vimrc ~/.vimrc.after
 	defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+zsh:
+	test -d ~/.oh-my-zsh || sh -c "$$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	rm -f ~/.zshrc*
+	ln -s `pwd`/zsh/zshrc ~/.zshrc

@@ -23,7 +23,7 @@
 [merge]
     ff = false
 [pull]
-    rebase = merges
+    rebase = true
 [push]
     default = current
     followtags = true
