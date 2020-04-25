@@ -1,0 +1,43 @@
+# Exports.
+
+export CLICOLOR=1
+export EDITOR=vim
+export JAVA_HOME=$(/usr/libexec/java_home)
+export NODE_PATH="/usr/local/lib/node_modules"
+export ZSH="$HOME/.oh-my-zsh"
+
+# Prompt.
+
+ZSH_THEME="robbyrussel"
+
+# plugins=(git)
+
+# Aliases.
+
+alias ..="cd .."
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
+
+# Tools.
+
+if [ -f $(brew --prefix nvm)/nvm.sh ]; then
+    mkdir -p $HOME/.nvm
+    export NVM_DIR="$HOME/.nvm"
+    source $(brew --prefix nvm)/nvm.sh
+fi
+
+if [ -f $HOME/.rvm/scripts/rvm ]; then
+    source $HOME/.rvm/scripts/rvm
+    export PATH="$HOME/.rvm/bin:$PATH"
+fi
+
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+    export VIRTUALENVWRAPPER_PYTHON=$(which python3)
+    source virtualenvwrapper.sh
+fi
+
+if [ -f $ZSH/oh-my-zsh.sh ]; then
+    source $ZSH/oh-my-zsh.sh
+fi

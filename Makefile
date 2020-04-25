@@ -1,6 +1,6 @@
-.PHONY: ack bash brew git vim
+.PHONY: ack bash brew git vim zsh
 
-install: macos ack bash git vim
+install: macos ack zsh bash git vim
 
 all: brew install node
 
@@ -32,6 +32,11 @@ brew:
 	brew reinstall yarn
 	brew upgrade
 	brew cleanup
+
+zsh:
+	test -d ~/.oh-my-zsh || sh -c "$$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	rm -f ~/.zshrc*
+	ln -s `pwd`/zsh/zshrc ~/.zshrc
 
 bash:
 	rm -f ~/.bashrc ~/.inputrc
