@@ -66,6 +66,7 @@ macos:
 	defaults write NSGlobalDomain AppleInterfaceStyle -string Dark
 	defaults write NSGlobalDomain AppleShowScrollBars -string Automatic
 	defaults write NSGlobalDomain AppleAquaColorVariant -int 6
+	defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 	sudo defaults write /Library/Preferences/.GlobalPreferences MultipleSessionEnabled -bool false
 	sudo defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool false
 	killall SystemUIServer
