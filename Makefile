@@ -11,16 +11,14 @@ ack:
 brew:
 	which brew || ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew update
-	brew cask reinstall java
-	brew cask reinstall qlmarkdown
-	brew cask reinstall visual-studio-code
+	brew reinstall --cask qlmarkdown
+	brew reinstall --cask visual-studio-code
 	brew reinstall ack
 	brew reinstall bash-completion
 	brew reinstall findutils
 	brew reinstall fop
 	brew reinstall git
 	brew reinstall git-extras
-	brew reinstall hardlink-osx
 	brew reinstall hub
 	brew reinstall macvim
 	brew reinstall node
