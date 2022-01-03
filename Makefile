@@ -11,6 +11,7 @@ ack:
 brew:
 	which brew || ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew update
+	brew reinstall --cask kap
 	brew reinstall --cask qlmarkdown
 	brew reinstall --cask visual-studio-code
 	brew reinstall ack
