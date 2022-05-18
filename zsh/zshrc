@@ -32,14 +32,18 @@ if [ -f $(brew --prefix nvm)/nvm.sh ]; then
     source $(brew --prefix nvm)/nvm.sh
 fi
 
-if [ -f $HOME/.rvm/scripts/rvm ]; then
-    source $HOME/.rvm/scripts/rvm
-    export PATH="$HOME/.rvm/bin:$PATH"
+if [ -f /usr/local/bin/rbenv ]; then
+    eval "$(rbenv init - zsh)"
 fi
 
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     export VIRTUALENVWRAPPER_PYTHON=$(which python3)
     source virtualenvwrapper.sh
+fi
+
+if [ -f $ZENDESK_CODE_DIR/zdi/dockmaster/zdi.sh ]; then
+    export DOCKER_FOR_MAC_ENABLED=$(which docker)
+    source $ZENDESK_CODE_DIR/zdi/dockmaster/zdi.sh
 fi
 
 if [ -f $ZSH/oh-my-zsh.sh ]; then

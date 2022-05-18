@@ -25,6 +25,7 @@ brew:
 	brew reinstall node
 	brew reinstall nvm
 	brew reinstall python
+	brew reinstall rbenv
 	brew reinstall rename
 	brew reinstall vcprompt
 	brew reinstall watchman
@@ -104,8 +105,6 @@ python:
 
 ruby:
 	sudo gem install -u bundler
-	sudo gem install -u travis-lint
-	(which rvm && rvm get stable) || curl -sSL https://get.rvm.io | bash -s stable
 
 vim:
 	git submodule init
