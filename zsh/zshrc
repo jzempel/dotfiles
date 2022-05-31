@@ -42,7 +42,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
 fi
 
 if [ -f $ZENDESK_CODE_DIR/zdi/dockmaster/zdi.sh ]; then
-    export DOCKER_FOR_MAC_ENABLED=$(which docker)
+    export DOCKER_FOR_MAC_ENABLED=true
     source $ZENDESK_CODE_DIR/zdi/dockmaster/zdi.sh
 fi
 
