@@ -2,7 +2,6 @@
 
 export CLICOLOR=1
 export EDITOR=vim
-export JAVA_HOME=$(/usr/libexec/java_home)
 export NODE_PATH="/usr/local/lib/node_modules"
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -25,6 +24,10 @@ alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
 
 # Tools.
+
+if [ -f /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 if [ -f $(brew --prefix nvm)/nvm.sh ]; then
     mkdir -p $HOME/.nvm

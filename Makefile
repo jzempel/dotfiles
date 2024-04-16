@@ -9,7 +9,7 @@ ack:
 	ln -s `pwd`/ack/ackrc ~/.ackrc
 
 brew:
-	which brew || ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	which brew || /bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	brew update
 	brew reinstall --cask kap
 	brew reinstall --cask qlmarkdown
