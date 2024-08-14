@@ -20,6 +20,7 @@ brew:
 	brew reinstall fop
 	brew reinstall git
 	brew reinstall git-extras
+	brew reinstall --cask git-credential-manager
 	brew reinstall hub
 	brew reinstall macvim
 	brew reinstall node
@@ -29,7 +30,6 @@ brew:
 	brew reinstall rename
 	brew reinstall vcprompt
 	brew reinstall watchman
-	brew reinstall yarn
 	brew upgrade
 	brew cleanup
 
