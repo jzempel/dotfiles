@@ -3,6 +3,8 @@
 .DS_Store
 .Spotlight-V100
 .Trashes
+.yalc
+yalc.lock
 tags
 !tags/
 !.gitignore
