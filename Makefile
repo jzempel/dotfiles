@@ -14,6 +14,7 @@ brew:
 	brew reinstall --cask kap
 	brew reinstall --cask qlmarkdown
 	brew reinstall --cask visual-studio-code
+	brew reinstall --cask claude-code
 	brew reinstall ack
 	brew reinstall bash-completion
 	brew reinstall findutils
