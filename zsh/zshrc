@@ -44,11 +44,10 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source virtualenvwrapper.sh
 fi
 
-if [ -f $ZENDESK_CODE_DIR/zdi/dockmaster/zdi.sh ]; then
-    export DOCKER_FOR_MAC_ENABLED=true
-    source $ZENDESK_CODE_DIR/zdi/dockmaster/zdi.sh
-fi
-
 if [ -f $ZSH/oh-my-zsh.sh ]; then
     source $ZSH/oh-my-zsh.sh
+fi
+
+if [[ "$TERM_PROGRAM" == "kiro" ]]; then
+    source "$(kiro --locate-shell-integration-path zsh)"
 fi

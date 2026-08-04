@@ -83,3 +83,7 @@ if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     export VIRTUALENVWRAPPER_PYTHON=$(which python3)
     source virtualenvwrapper.sh
 fi
+
+if [[ "$TERM_PROGRAM" == "kiro" ]]; then
+    source "$(kiro --locate-shell-integration-path bash)"
+fi
