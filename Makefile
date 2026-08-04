@@ -26,6 +26,7 @@ brew:
 	brew reinstall macvim
 	brew reinstall node
 	brew reinstall nvm
+	brew reinstall pnpm
 	brew reinstall python
 	brew reinstall rbenv
 	brew reinstall rename
