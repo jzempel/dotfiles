@@ -12,7 +12,7 @@ ZSH_THEME="kennethreitz"
 plugins=(
     git
     git-prompt
-    github
+    gh
 )
 
 # Aliases.
